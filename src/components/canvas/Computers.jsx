@@ -8,11 +8,17 @@ const Computers = () => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} 
-      groundColor="black" />
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={1} />
-      <primitive 
-      object={computer.scene} 
+      <primitive
+        object={computer.scene}
+        scale={0.75}
+        position={[-20, 50, 10]}
+        angle={0.12}
+        penumbra={1}
+        intensity={1}
+        castShadow
+        shadow-mapSize={1024}
       />
     </mesh>
   );
@@ -39,4 +45,4 @@ const ComputerCanvas = () => {
   );
 };
 
-export default ComputerCanvas;
+export default Computers;
